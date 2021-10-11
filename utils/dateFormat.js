@@ -1,3 +1,5 @@
+// Modeled after U of U bootcamp
+
 const addDateSuffix = date => {
     let dateStr = date.toString();
   
