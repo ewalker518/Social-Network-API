@@ -1,4 +1,5 @@
-const { User, Thought } = require('../models');
+// modeled after module 18 of the U of U bootcamp
+const { User } = require('../models');
 
 const userController = {
     getAllUsers(req, res) {
@@ -8,7 +9,7 @@ const userController = {
             select: '-__v'
         })
         .select('-__v')
-        .sort({ _id: -1 })
+        // .sort({ _id: -1 })                        // not sure if needed
         .then(dbUserData => res.json(dbUserData))
         .catch(err => {
             console.log(err);
