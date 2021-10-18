@@ -25,7 +25,7 @@ const userController = {
             .select('-__v')
             .then(dbUserData => {
                 if (!dbUserData) {
-                    res.status(404).json({ message: "No user found with this id. Try again, you blubbering idiot, and get it right this time" });
+                    res.status(404).json({ message: "No user found with this id" });
                     return;
                 }
                 res.json(dbUserData);
@@ -50,7 +50,7 @@ const userController = {
             )
             .then(dbUserData => {
                 if (!dbUserData) {
-                    res.status(404).json({ message: "No user found with this id. Maybe you're just not cut out for this" });
+                    res.status(404).json({ message: "No user found with this id" });
                     return;
                 }
                 res.json(dbUserData);
@@ -69,7 +69,7 @@ const userController = {
             )
             .then(dbUserData => {
                 if (!dbUserData) {
-                    res.status(404).json({ message: "No user found with this id, please try to do better with your life, your mother would be so disappointed" });
+                    res.status(404).json({ message: "No user found with this id" });
                     return;
                 }
                 res.json(dbUserData);
@@ -81,7 +81,7 @@ const userController = {
         User.findOneAndDelete({ _id: params.id })
             .then(dbUserData => {
                 if (!dbUserData) {
-                    res.status(404).json({ message: "No user found with this id, perhaps deep down you don't actually want to delete anything at all? Best to sleep on it and decide in the morning" });
+                    res.status(404).json({ message: "No user found with this id" });
                     return;
                 }
                 res.json(dbUserData);
@@ -97,7 +97,7 @@ const userController = {
         )
         .then(dbUserData => {
             if (!dbUserData) {
-                res.status(404).json({ message: "No user found with this id. I suspect it's because you  don't actually have any friends that could be removed in the first place..." });
+                res.status(404).json({ message: "No user found with this id" });
                 return;
             }
             res.json(dbUserData);
