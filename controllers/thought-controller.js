@@ -1,4 +1,4 @@
-// modeled after module 18 of the U of U bootcamp, hence the lingering pizzas everywhere
+// modeled after module 18 of the U of U bootcamp
 const { Thought } = require('../models');
 
 const thoughtController = {
