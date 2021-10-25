@@ -11,6 +11,15 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^6.0.10"
-  }
+    "mongoose": "^6.0.11"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewalker518/Social-Network-API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ewalker518/Social-Network-API/issues"
+  },
+  "homepage": "https://github.com/ewalker518/Social-Network-API#readme"
 }

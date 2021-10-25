@@ -1,11 +1,12 @@
 // modeled after module 18 of the U of U bootcamp
-const { Thought } = require('../models');
+const { Thought, User } = require('../models');
 
 const thoughtController = {
   getAllThoughts(req, res) {
     Thought.find({})
     .populate({
-      path: 'user',
+      path: 'User',
+      strictPopulate: false,
       select: '-__v'
     })
     .select('-__v')
@@ -18,9 +19,10 @@ const thoughtController = {
   },
 
   getThoughtById({ params }, res) {
-    Thought.findOne({ _id: param.id })
+    Thought.findOne({ _id: params.id })
     .populate({
       path: 'user',
+      strictPopulate: false,
       select: '-__v'
     })
     .select('-__v')
